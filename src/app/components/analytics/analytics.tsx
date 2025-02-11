@@ -1,6 +1,8 @@
 import Script from 'next/script';
 
 const Analytics = () => {
+  console.log('ga tracking id:', process.env.GA_TRACKING_ID);
+
   return (
     <>
       {/* <!-- Google tag (gtag.js) --> */}
