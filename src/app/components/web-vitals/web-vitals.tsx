@@ -17,6 +17,7 @@ const WebVitals = () => {
         event_label: metric.id, // id unique to current page load
         non_interaction: true, // avoids affecting bounce rate.
         path: currentPath,
+        rating: metric.rating,
       });
 
       console.log('ga event sent: ', metric.name);
