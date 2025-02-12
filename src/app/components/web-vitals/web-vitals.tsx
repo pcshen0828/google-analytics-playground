@@ -11,7 +11,7 @@ const WebVitals = () => {
     // Use `window.gtag` if you initialized Google Analytics as this example:
     // https://github.com/vercel/next.js/blob/canary/examples/with-google-analytics
 
-    if (window && typeof window.gtag === 'function') {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
       window.gtag('event', metric.name, {
         value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), // values must be integers
         event_label: metric.id, // id unique to current page load
